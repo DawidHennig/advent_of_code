@@ -8,7 +8,6 @@ r = 0
 
 for _ in f:
     dim = [int(x) for x in findall('(\d+)', _)]
-    # 2*l*w + 2*w*h + 2*h*l
     dim.sort()
     p += 2*dim[0]*dim[1] + 2*dim[1]*dim[2] + 2*dim[2]*dim[0] + dim[0]*dim[1]
 
@@ -16,7 +15,6 @@ print(p)
 
 for _ in f:
     dim = [int(x) for x in findall('(\d+)', _)]
-    # 2*l*w + 2*w*h + 2*h*l
     dim.sort()
     r += 2*dim[0] + 2*dim[1] + dim[0]*dim[1]*dim[2]
 
